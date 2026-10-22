@@ -1,0 +1,232 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+  <meta charset="utf-8">
+  <meta content="width=device-width, initial-scale=1.0" name="viewport">
+  <title>Viaje Interplanetario VR</title>
+  <meta name="description" content="Juego interactivo en realidad virtual para que los niños exploren los planetas y sus órbitas.">
+
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🪐</text></svg>">
+
+  <!-- Fonts -->
+  <link href="https://fonts.googleapis.com" rel="preconnect">
+  <link href="https://fonts.gstatic.com" rel="preconnect" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Fredoka:wght@400;500;600;700&family=Nunito:wght@400;600;700&display=swap" rel="stylesheet">
+
+  <!-- Vendor CSS Files -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css" rel="stylesheet">
+  <link href="https://unpkg.com/aos@2.3.4/dist/aos.css" rel="stylesheet">
+
+  <!-- Main CSS File -->
+  <link href="assets/css/style.css" rel="stylesheet">
+</head>
+
+<body>
+
+  <canvas id="stars"></canvas>
+
+  <!-- Header -->
+  <nav class="navbar navbar-expand-lg navbar-dark fixed-top header">
+    <div class="container">
+      <a class="navbar-brand logo" href="#inicio">🚀 Viaje <span>Interplanetario</span></a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navmenu" aria-label="Abrir menú">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navmenu">
+        <ul class="navbar-nav ms-auto">
+          <li class="nav-item"><a class="nav-link" href="#inicio">Inicio</a></li>
+          <li class="nav-item"><a class="nav-link" href="#juego">El Juego</a></li>
+          <li class="nav-item"><a class="nav-link" href="#planetas">Planetas</a></li>
+          <li class="nav-item"><a class="nav-link" href="#como-jugar">¿Cómo jugar?</a></li>
+          <li class="nav-item"><a class="nav-link" href="#equipo">Equipo</a></li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <main>
+
+    <!-- Hero Section -->
+    <section id="inicio" class="hero">
+      <div class="container">
+        <div class="row align-items-center gy-5">
+          <div class="col-lg-6 text-center text-lg-start" data-aos="fade-right">
+            <span class="pill"><i class="bi bi-badge-vr"></i> Realidad Virtual</span>
+            <h1>¡Despega y explora el <span class="gradient-text">Sistema Solar</span>!</h1>
+            <p class="lead">Ponte tus gafas de realidad virtual, sube a tu nave y viaja entre los planetas. Mira cómo giran alrededor del Sol y descubre sus secretos.</p>
+            <div class="d-flex gap-3 justify-content-center justify-content-lg-start flex-wrap">
+              <a href="#juego" class="btn-space">¡Comenzar aventura! <i class="bi bi-rocket-takeoff"></i></a>
+              <a href="#planetas" class="btn-space outline">Ver planetas</a>
+            </div>
+          </div>
+
+          <div class="col-lg-6" data-aos="zoom-in" data-aos-delay="200">
+            <div class="solar" aria-hidden="true">
+              <div class="sun"></div>
+              <div class="orbit o1"><div class="planet mercurio"></div></div>
+              <div class="orbit o2"><div class="planet venus"></div></div>
+              <div class="orbit o3"><div class="planet tierra"></div></div>
+              <div class="orbit o4"><div class="planet marte"></div></div>
+              <div class="orbit o5"><div class="planet jupiter"></div></div>
+              <div class="orbit o6"><div class="planet saturno"></div></div>
+              <div class="orbit o7"><div class="planet urano"></div></div>
+              <div class="orbit o8"><div class="planet neptuno"></div></div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Game Section -->
+    <section id="juego" class="section">
+      <div class="container">
+        <div class="section-title" data-aos="fade-up">
+          <h2>🎮 El Juego</h2>
+          <p>Una aventura espacial creada en Unity para aprender jugando</p>
+        </div>
+
+        <div class="row g-4">
+          <div class="col-md-6 col-lg-3" data-aos="fade-up" data-aos-delay="100">
+            <div class="feature-card c1">
+              <div class="icon"><i class="bi bi-badge-vr-fill"></i></div>
+              <h3>Inmersivo</h3>
+              <p>Con las gafas VR sentirás que flotas de verdad en el espacio.</p>
+            </div>
+          </div>
+          <div class="col-md-6 col-lg-3" data-aos="fade-up" data-aos-delay="200">
+            <div class="feature-card c2">
+              <div class="icon"><i class="bi bi-globe-americas"></i></div>
+              <h3>8 Planetas</h3>
+              <p>Visita cada planeta y conoce su tamaño, color y curiosidades.</p>
+            </div>
+          </div>
+          <div class="col-md-6 col-lg-3" data-aos="fade-up" data-aos-delay="300">
+            <div class="feature-card c3">
+              <div class="icon"><i class="bi bi-arrow-repeat"></i></div>
+              <h3>Órbitas</h3>
+              <p>Observa cómo los planetas giran alrededor del Sol.</p>
+            </div>
+          </div>
+          <div class="col-md-6 col-lg-3" data-aos="fade-up" data-aos-delay="400">
+            <div class="feature-card c4">
+              <div class="icon"><i class="bi bi-lightbulb-fill"></i></div>
+              <h3>Aprende</h3>
+              <p>Aprende ciencia de una forma divertida e interactiva.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Planets Section -->
+    <section id="planetas" class="section">
+      <div class="container">
+        <div class="section-title" data-aos="fade-up">
+          <h2>🪐 Conoce los planetas</h2>
+          <p>Toca cada planeta para descubrir un dato curioso</p>
+        </div>
+
+        <div class="row g-4" id="planet-grid"></div>
+      </div>
+    </section>
+
+    <!-- How to Play Section -->
+    <section id="como-jugar" class="section">
+      <div class="container">
+        <div class="section-title" data-aos="fade-up">
+          <h2>👩‍🚀 ¿Cómo jugar?</h2>
+          <p>Sigue estos pasos y prepárate para el despegue</p>
+        </div>
+
+        <div class="steps">
+          <div class="step" data-aos="fade-up" data-aos-delay="100">
+            <div class="step-number">1</div>
+            <i class="bi bi-badge-vr"></i>
+            <h4>Ponte las gafas</h4>
+            <p>Ajusta las gafas de realidad virtual con ayuda de tu profe.</p>
+          </div>
+          <div class="step" data-aos="fade-up" data-aos-delay="200">
+            <div class="step-number">2</div>
+            <i class="bi bi-rocket-takeoff"></i>
+            <h4>¡Despega!</h4>
+            <p>Inicia el juego y sal de la Tierra rumbo al espacio.</p>
+          </div>
+          <div class="step" data-aos="fade-up" data-aos-delay="300">
+            <div class="step-number">3</div>
+            <i class="bi bi-eye"></i>
+            <h4>Mira a tu alrededor</h4>
+            <p>Gira la cabeza para ver los planetas y sus órbitas.</p>
+          </div>
+          <div class="step" data-aos="fade-up" data-aos-delay="400">
+            <div class="step-number">4</div>
+            <i class="bi bi-trophy"></i>
+            <h4>Descubre</h4>
+            <p>Visita todos los planetas y conviértete en experto del espacio.</p>
+          </div>
+        </div>
+
+        <div class="tip" data-aos="zoom-in">
+          <i class="bi bi-shield-check"></i>
+          <p><strong>Consejo de seguridad:</strong> juega sentado o en un espacio libre de obstáculos, y descansa si te sientes mareado.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Team Section -->
+    <section id="equipo" class="section">
+      <div class="container">
+        <div class="section-title" data-aos="fade-up">
+          <h2>🛰️ Nuestro equipo</h2>
+          <p>Proyecto de la clase de Tecnologías Inmersivas</p>
+        </div>
+
+        <div class="row g-4 justify-content-center">
+          <!-- Cambia los nombres por los de tu equipo -->
+          <div class="col-6 col-md-3" data-aos="fade-up" data-aos-delay="100">
+            <div class="team-card">
+              <div class="avatar">👨‍🚀</div>
+              <h4>Integrante 1</h4>
+              <p>Desarrollo en Unity</p>
+            </div>
+          </div>
+          <div class="col-6 col-md-3" data-aos="fade-up" data-aos-delay="200">
+            <div class="team-card">
+              <div class="avatar">👩‍🚀</div>
+              <h4>Integrante 2</h4>
+              <p>Diseño 3D</p>
+            </div>
+          </div>
+          <div class="col-6 col-md-3" data-aos="fade-up" data-aos-delay="300">
+            <div class="team-card">
+              <div class="avatar">🧑‍🚀</div>
+              <h4>Integrante 3</h4>
+              <p>Página web</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <footer class="footer">
+    <div class="container text-center">
+      <div class="logo mb-2">🚀 Viaje <span>Interplanetario</span></div>
+      <p>Hecho con 💜 para la clase de Tecnologías Inmersivas · <span id="year"></span></p>
+    </div>
+  </footer>
+
+  <a href="#inicio" id="scroll-top" class="scroll-top" aria-label="Volver arriba"><i class="bi bi-rocket"></i></a>
+
+  <!-- Vendor JS Files -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="https://unpkg.com/aos@2.3.4/dist/aos.js"></script>
+
+  <!-- Main JS File -->
+  <script src="assets/js/main.js"></script>
+
+</body>
+
+</html>
